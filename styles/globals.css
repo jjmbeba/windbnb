@@ -1,26 +1,31 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer components{
+    .label{
+        @apply font-[800] text-[9px] leading-[11px] text-[#333333];
+    }
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+    .container{
+        @apply flex flex-col items-start justify-start gap-[4px] py-[12px] px-[26px] cursor-pointer;
+    }
+    .btn{
+        @apply py-[3px] px-[7px] rounded-[4px] text-[#828282] border border-solid border-[#828282];
+    }
+    .count{
+        @apply font-bold text-[#333333];
+    }
+    .count-container{
+        @apply flex items-center gap-[15px] mt-[12px] text-[14px] leading-[18px];
+    }
+    .inp{
+        @apply outline-none border-transparent cursor-pointer;
+    }
 }
