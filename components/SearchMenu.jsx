@@ -131,6 +131,10 @@ const SearchMenu = () => {
                 </div>
             )
            }
+           <button onClick={() => dispatch(setMenuState())} className={`m-auto md:hidden py-[15px] max-w-[126px] ${active.guests ? 'opacity-100' : active.location && 'opacity-100'} opacity-0 flex absolute bottom-[25px] left-[50%] translate-x-[-50%] item gap-[10px] bg-[#EB5757] text-[#F2F2F2] font-mulish font-bold text-[14px] leading-[18px] rounded-[16px] shadow-search px-[27px] max-h-[48px]`}>
+                <Image src="/searchWhite.svg" height={17} width={17} alt="search"/>
+                <span>Search</span>
+            </button>
         </div>
     </div>
   )
