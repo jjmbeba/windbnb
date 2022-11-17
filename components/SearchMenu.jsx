@@ -77,7 +77,7 @@ const SearchMenu = () => {
                 <label htmlFor="location" className='label'>LOCATION</label>
                 <input className='inp' readOnly value={locChoice !== '' ? `${locChoice}, Finland    ` : ''} type="text" name='location' placeholder='Helsinki, Finland'/>
             </div>
-            <div onClick={handleGuestClick} className={`container border border-solid border-transparent border-l-[#F2F2F2] ${active.guests && 'rounded-[16px] border-[#333333] border-l-[#333333]'}`}>
+            <div onClick={handleGuestClick} className={`container border border-solid border-transparent border-l-[#F2F2F2] ${active.guests && 'border border-solid rounded-[16px] border-l-[#333333] border-[#333333] '}`}>
                 <label htmlFor="guests" className='label'>GUESTS</label>
                 <input className='inp' readOnly value={guests !== 0 ? `${guests} guests` : ''} type="text" name='guests' placeholder='Add guests'/>
             </div>
